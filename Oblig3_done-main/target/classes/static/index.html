@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinobillettbestilling</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<table>
+    <tr>
+        <td> Velg film:</td>
+        <td>
+            <select id="film" class="custom-select" onchange="sjekkfilm()">
+                <option value="Velg film her">Velg film her</option>
+                <option value="Polarekspressen">Polarekspressen</option>
+                <option value="Olsenbanden og gjengen">Olsenbanden og gjengen</option>
+                <option value="Harry Potter og mysteriekammeret">Harry Potter og mysteriekammeret</option>
+                <option value="Avatar">Avatar</option>
+            </select>
+        </td>
+        <td id="feilValg" class="feil" style="color: red"></td>
+    </tr>
+
+    <tr>
+        <td> Antall</td>
+        <td><input type="text" id="antall" size="1px" onchange="sjekkAntall()"></td>
+        <td id="feilAntall" class="feil" style="color: red"></td>
+    </tr>
+    <tr>
+        <td> Fornavn</td>
+        <td><input type="text" id="fornavn" size="10px" onchange="sjekkfornavn()"></td>
+        <td id="feilFornavn" class="feil" style="color: red"></td>
+    </tr>
+
+    <tr>
+        <td> Etternavn</td>
+        <td><input type="text" id="etternavn" size="10px" onchange="sjekketternavn()"></td>
+        <td id="feilEtternavn" class="feil" style="color: red"></td>
+    </tr>
+
+    <tr>
+        <td> Telefonnr</td>
+        <td><input type="text" id="telefonnr" size="10px" onchange="sjekkTlf()"></td>
+        <td id="feilTelefonnr" class="feil" style="color: red"></td>
+    </tr>
+
+    <tr>
+        <td> Epost</td>
+        <td><input type="text" id="epost" size="10px" onchange="sjekkEpost()"></td>
+        <td id="feilEpost" class="feil" style="color: red"></td>
+    </tr>
+
+</table>
+<button type="button" id="kjopBillettBtn" class="btn btn-success">Kjøp Billett</button>
+<h2>Alle billetter</h2>
+<div id="output"></div>
+<button type="button" id="slettAlleBiletterBtn" class="btn btn-danger">Slett alle billetter</button>
+
+</div>
+</body>
+
+</html>
